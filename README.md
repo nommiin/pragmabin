@@ -108,7 +108,7 @@ a scripting language that allows you to read/write/map binary files
   Example: : execKill(Parsing fail)
   Usage: Ends the execution of the script and prints out a message.  
 ```
-#example
+# example
 Reading and listening all chunks in a GameMaker IFF-based data file
 ```
 ;;; Open Binary
@@ -136,7 +136,7 @@ DATA_SIZE: readUInt32()
 FAILURE: execKill(File parsing has failed.)
 ```
 
-#todo
+# todo
  * add reference literals (pass information (strings, numbers) into a function that uses references 
  * add file exporting
  * add file modification
