@@ -4,6 +4,7 @@ a scripting language that allows you to read/write/map binary files
 # names for stuff
 * reference is the name of a line in your script, you can set a reference by writing a unique name at the start of a line behind the colon (ie: `fileSize: readUInt64()` the reference would be `fileSize`)
 * you can also leave lines unnamed, returned values will be assigned as the current line number
+* sorry if you don't like camel case
 
 # functions
 ```
