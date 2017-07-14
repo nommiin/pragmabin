@@ -16,13 +16,18 @@ namespace PragmaBin {
                 this.contents = content;
             }
         }
-
+        
+        
+        // CHANGE THIS!!!!!!!!!!!!!
+        public static string scriptLocation = @"D:\PragmaBin\gm.prag";
+        
+        
         public static string scriptReturn = null;
         public static string scriptLimit = null;
         public static string scriptJump = null;
         public static bool scriptContinue = true;
         public static BinaryReader scriptBinary;
-        public static string scriptLocation = @"D:\PragmaBin\gm.prag";
+        
         public static List<scriptNode> scriptData = new List<scriptNode>();
         public static Dictionary<string, dynamic> scriptReferences = new Dictionary<string, dynamic> {
             { "execTell", 0 }
@@ -43,7 +48,7 @@ namespace PragmaBin {
             for(int i = 0; i < scriptLines.Length; i++) { string scriptLine = scriptLines[i];
                 int scriptIndex = scriptMoveTo(scriptLine, ':');
                 if (scriptIndex > -1) {
-                    string scriptReference = scriptLine.Substring(0, scriptIndex++ - 1).Trim(), scriptContents = scriptLine.Substring(scriptIndex, scriptLine.Length - scriptIndex).Trim(); scriptReference = scriptReference == "" ? i.ToString() : scriptReference;
+                    string scriptReference = scriptLine.Substring(0, scriptIndex++ - 1).Trim(), scriptContents = scriptLine.Substring(scriptIndex, scriptLine.Length - scriptIndex).Trim(); scriptReference = scriptReference == "" ? (i + 1).ToString() : scriptReference;
                     scriptData.Add(new scriptNode(scriptReference, scriptContents));
                 }
             }
