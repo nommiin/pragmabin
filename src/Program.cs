@@ -27,7 +27,6 @@ namespace PragmaBin {
         public static string scriptJump = null;
         public static bool scriptContinue = true;
         public static BinaryReader scriptBinary;
-        
         public static List<scriptNode> scriptData = new List<scriptNode>();
         public static Dictionary<string, dynamic> scriptReferences = new Dictionary<string, dynamic> {
             { "execTell", 0 }
